@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+
+        <input type="number" id="valor1" placeholder="Primeiro Numero">
+        <br>
+        <input type="number" id="valor2" placeholder="Segundo Numero">
+        <br>
+
+
+        <select id="operacao">
+            <option value="+">Somar (+)</option>
+            <option value="-">Subtrair (-)</option>
+            <option value="*">Multiplicar (x)</option>
+            <option value="/">Dividir (÷)</option>
+        </select>
+        <br><br>
+
+        <button onclick="calcular()">Calcular</button><br><br>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+        function calcular(){
+            const valor1 = parseFloat(document.getElementById("valor1").value);
+            const valor2 = parseFloat(document.getElementById("valor2").value);
+            const operacao = document.getElementById("operacao").value;
+            let resultado;
+
+            if(isNaN(valor1) || isNaN(valor2)) { //se valor1 e valor2 não forem números{}
+                document.getElementById("resultado").textcontent = "Por favor, insira dois números válidos.";
+                return;
+            }
+
+            switch (operacao){
+                case "+":
+                    resultado = valor1 + valor2;
+                    break;
+                case "-":
+                    resultado = valor1 - valor2;
+                    break;
+                case "*":
+                    resultado = valor1 * valor2;
+                    break;
+                case "/":
+                    if (valor2 === 0) {
+                        document.getElementById("resultado").textContent = "Não é possivel dividir por zero!";
+                        return;
+                    }
+                    resultado = valor1 / valor2;
+                    break;
+            }
+
+            document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

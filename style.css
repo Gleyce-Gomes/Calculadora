@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 90px;
+  background-color: #f2f2f2;
+}
+.container{
+    display:inline-block; /*cria uma caixa em volta*/
+    background: white;
+    padding: 35px 50px;
+    border-radius:10px;/*expessura da linha da caixa*/
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+h1{
+  font-size: 40px;
+}
