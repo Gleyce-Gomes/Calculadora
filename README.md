@@ -6,6 +6,9 @@ Uma calculadora simples feita com **HTML**, **CSS** e **JavaScript**, que permit
 
 ![Calculadora](Foto%20-%20Calculadora.png)
 
+## 🔗 Acesse o site aqui:
+https://gleyce-gomes.github.io/Calculadora/
+
 ## 🚀 Funcionalidades
 
 - Inserir dois números.
